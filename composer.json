@@ -101,8 +101,7 @@
         ],
         "build-assets": "composer install",
         "prepare-for-pantheon": [
-            "composer build-assets",
-            "composer post-root-package-install"
+            "composer build-assets"
         ]
     }
 }
