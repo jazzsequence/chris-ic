@@ -99,6 +99,10 @@
             ".\/vendor\/bin\/phpcs --standard=WordPress --extensions=php --ignore=node_modules,bower_components,vendor,register-theme-directory.php,bedrock-* .\/web\/app\/mu-plugins",
             ".\/vendor\/bin\/phpcs --standard=WordPress --extensions=php --ignore=node_modules,bower_components,vendor .\/web\/app\/themes"
         ],
-        "build-assets": "composer install"
+        "build-assets": "composer install",
+        "prepare-for-pantheon": [
+            "composer build-assets",
+            "composer post-root-package-install"
+        ]
     }
 }
