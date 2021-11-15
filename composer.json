@@ -95,7 +95,9 @@
         "unit-test": "echo 'No unit test step defined.'",
         "lint": "find web\/modules\/custom web\/themes\/custom -name '*.php' -exec php -l {} \\;",
         "code-sniff": [
-            ".\/vendor\/bin\/phpcs --standard=WordPress --extensions=php --ignore=node_modules,bower_components,vendor"
+            ".\/vendor\/bin\/phpcs --standard=WordPress --extensions=php --ignore=node_modules,bower_components,vendor .\/web\/app/plugins",
+            ".\/vendor\/bin\/phpcs --standard=WordPress --extensions=php --ignore=node_modules,bower_components,vendor .\/web\/app/mu-plugins,register-theme-directory.php,bedrock-*",
+            ".\/vendor\/bin\/phpcs --standard=WordPress --extensions=php --ignore=node_modules,bower_components,vendor .\/web\/app/themes"
         ],
         "build-assets": "composer install"
     }
