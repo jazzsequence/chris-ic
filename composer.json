@@ -99,9 +99,7 @@
             ".\/vendor\/bin\/phpcs --standard=WordPress --extensions=php --ignore=node_modules,bower_components,vendor,register-theme-directory.php,bedrock-* .\/web\/app\/mu-plugins",
             ".\/vendor\/bin\/phpcs --standard=WordPress --extensions=php --ignore=node_modules,bower_components,vendor .\/web\/app\/themes"
         ],
-        "build-assets": "composer install",
-        "prepare-for-pantheon": [
-            "composer build-assets"
-        ]
+        "build-assets": "echo 'No assets to build'",
+        "prepare-for-pantheon": "echo 'Nothing to prepare'"
     }
 }
